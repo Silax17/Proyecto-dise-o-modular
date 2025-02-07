@@ -9,9 +9,10 @@ public class main {
 		String nombre, lugar;
 		double cantidad;
 		System.out.println("Buenos dias! Que quieres hacer hoy?");
-
+		
 		System.out.println("Usuario selecciona buscar por nombre");
 		nombre = "Juana";
+		
 		// Codigo para buscar por nombre
 
 		System.out.println("Usuario selecciona buscar por origen");
@@ -19,7 +20,7 @@ public class main {
 		// Codigo para buscar por origen
 
 		System.out.println("Usuario selecciona ordenar por precio de menor a mayor");
-		// Codigo para ordenar de mayor a menor precio
+		Buscar.OrdenarMenorMajor(precio);
 
 		System.out.println("Usuario selecciona ordenar por precio de menor a mayor");
 		// Codigo para ordenar de mayor a menor precio

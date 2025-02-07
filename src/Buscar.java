@@ -1,12 +1,36 @@
+import java.util.Scanner;
 
 public class Buscar {
+	
 
 	public static void main(String[] args) {
 
 
 	}
-	public static void BuscarProdu(String[] hierba){
+	public static void BuscarProduNom(String[] hierba){
 		
+		
+		
+	}
+	
+	public static void OrdenarMajorMenor(double[] precio) {
+		Scanner scan= new Scanner(System.in);
+		System.out.println("");
+		
+	}
+	public static void OrdenarMenorMajor(double[] precio) {
+		Scanner scan= new Scanner(System.in);
+		for(int i=0;i<precio.length;i++) {
+			for(int j=i+1;j<precio.length;j++) {
+				if(precio[i]>precio[j]) {
+					double doble=precio[i];
+					precio[i]=precio[j];
+					precio[j]=doble;
+				}
+				
+			}
+			
+		}
 		
 	}
 
