@@ -35,11 +35,9 @@ public class Buscar {
 				return ori;
 			}
 		}
-		
 		return "Pais no trobat";
-		
 	}
-	
+
 	public static void OrdenarMajorMenor(double[] precio) {
 		for(int i=0;i<precio.length;i++) {
 			for(int j=i+1;j<precio.length;j++) {
@@ -52,6 +50,7 @@ public class Buscar {
 			System.out.println(precio[i]);	
 		}
 	}
+	
 	public static void OrdenarMenorMajor(double[] precio) {
 		
 		for(int i=0;i<precio.length;i++) {
