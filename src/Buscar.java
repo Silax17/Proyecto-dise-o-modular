@@ -4,7 +4,8 @@ public class Buscar {
 	
 
 	public static void main(String[] args) {
-
+		double[] precio = { 1.70, 4.20, 2.47, 1.33 };
+		OrdenarMenorMajor(precio);
 
 	}
 	public static void BuscarProduNom(String[] hierba){
@@ -19,7 +20,7 @@ public class Buscar {
 		
 	}
 	public static void OrdenarMenorMajor(double[] precio) {
-		Scanner scan= new Scanner(System.in);
+		
 		for(int i=0;i<precio.length;i++) {
 			for(int j=i+1;j<precio.length;j++) {
 				if(precio[i]>precio[j]) {
@@ -27,8 +28,8 @@ public class Buscar {
 					precio[i]=precio[j];
 					precio[j]=doble;
 				}
-				
 			}
+			System.out.println(precio[i]);
 			
 		}
 		
