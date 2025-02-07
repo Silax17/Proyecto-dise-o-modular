@@ -6,7 +6,8 @@ public class Buscar {
 	public static void main(String[] args) {
 		double[] precio = { 1.70, 4.20, 2.47, 1.33 };
 		String[] hierba = { "Maria Juana", "Hierba de los bosques", "La seta feliz", "El oro verde" };
-		System.out.println(BuscarProduNom(hierba));
+		String[] origen = { "Mexico", "Andorra", "Marrueco", "Palestina" };
+		System.out.println(BuscarProduOri(origen));
 	}
 	public static String BuscarProduNom(String[] hierba){
 		Scanner scan=new Scanner(System.in);
@@ -22,6 +23,21 @@ public class Buscar {
 		}
 		
 		return "Planta no trobada";
+	}
+	public static String BuscarProduOri(String[] origen) {
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Introduzca nombre");
+		String nom="";
+		nom=scan.nextLine();
+		for(int i=0;i<origen.length;i++) {
+			if(origen[i].equals(nom)) {
+				String ori=origen[i];
+				return ori;
+			}
+		}
+		
+		return "Pais no trobat";
+		
 	}
 	
 	public static void OrdenarMajorMenor(double[] precio) {

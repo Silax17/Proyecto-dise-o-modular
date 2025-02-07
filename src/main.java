@@ -23,7 +23,7 @@ public class main {
 		Buscar.OrdenarMenorMajor(precio);
 
 		System.out.println("Usuario selecciona ordenar por precio de menor a mayor");
-		// Codigo para ordenar de mayor a menor precio
+		Buscar.OrdenarMajorMenor(precio);
 
 		System.out.println("Usuario selecciona varios productos para comprar");
 		// Codigo para seleccionar primer producto
