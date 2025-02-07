@@ -5,13 +5,23 @@ public class Buscar {
 
 	public static void main(String[] args) {
 		double[] precio = { 1.70, 4.20, 2.47, 1.33 };
-		OrdenarMajorMenor(precio);
-
+		String[] hierba = { "Maria Juana", "Hierba de los bosques", "La seta feliz", "El oro verde" };
+		System.out.println(BuscarProduNom(hierba));
 	}
-	public static void BuscarProduNom(String[] hierba){
+	public static String BuscarProduNom(String[] hierba){
+		Scanner scan=new Scanner(System.in);
+		System.out.println("Introduzca nombre");
+		String nom="";
+		nom=scan.nextLine().toLowerCase();
+		for(int i=0;i<hierba.length;i++) {
+			hierba[i]=hierba[i].toLowerCase();
+			if(hierba[i].contains(nom)) {
+				String planta=hierba[i];
+				return "Planta trobada "+planta;
+			}
+		}
 		
-		
-		
+		return "Planta no trobada";
 	}
 	
 	public static void OrdenarMajorMenor(double[] precio) {
@@ -23,10 +33,8 @@ public class Buscar {
 					precio[j]=doble;
 				}
 			}
-			System.out.println(precio[i]);
-			
+			System.out.println(precio[i]);	
 		}
-		
 	}
 	public static void OrdenarMenorMajor(double[] precio) {
 		
