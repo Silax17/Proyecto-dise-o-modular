@@ -8,7 +8,6 @@ public class main {
 	public static void main(String[] args) {
 		String nombre, lugar;
 		double cantidad;
-
 		System.out.println("Buenos dias! Que quieres hacer hoy?");
 
 		System.out.println("Usuario selecciona buscar por nombre");
