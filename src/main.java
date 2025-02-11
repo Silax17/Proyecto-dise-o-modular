@@ -14,16 +14,17 @@ public class main {
 		nombre = "Juana";
 		
 		// Codigo para buscar por nombre
+		buscar.nombre(nombre);
 
 		System.out.println("Usuario selecciona buscar por origen");
 		lugar = "Andorra";
 		// Codigo para buscar por origen
 
 		System.out.println("Usuario selecciona ordenar por precio de menor a mayor");
-		Buscar.OrdenarMenorMajor(precio);
+		Buscar.OrdenarMenorMajor(precio,hierba);
 
 		System.out.println("Usuario selecciona ordenar por precio de menor a mayor");
-		Buscar.OrdenarMajorMenor(precio);
+		Buscar.OrdenarMajorMenor(precio,hierba);
 
 		System.out.println("Usuario selecciona varios productos para comprar");
 		// Codigo para seleccionar primer producto

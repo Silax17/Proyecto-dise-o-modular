@@ -3,21 +3,15 @@ import java.util.Scanner;
 public class Buscar {
 	
 
-	public static void main(String[] args) {
-		double[] precio = { 1.70, 4.20, 2.47, 1.33 };
-		String[] hierba = { "Maria Juana", "Hierba de los bosques", "La seta feliz", "El oro verde" };
-		String[] origen = { "Mexico", "Andorra", "Marrueco", "Palestina" };
-		System.out.println(BuscarProduOri(origen));
-	}
-	public static String BuscarProduNom(String[] hierba){
+	public static String BuscarProduNom(){
 		Scanner scan=new Scanner(System.in);
 		System.out.println("Introduzca nombre");
 		String nom="";
 		nom=scan.nextLine().toLowerCase();
-		for(int i=0;i<hierba.length;i++) {
-			hierba[i]=hierba[i].toLowerCase();
-			if(hierba[i].contains(nom)) {
-				String planta=hierba[i];
+		for(int i=0;i<main.hierba.length;i++) {
+			main.hierba[i]=main.hierba[i].toLowerCase();
+			if(main.hierba[i].contains(nom)) {
+				String planta=main.hierba[i];
 				return "Planta trobada "+planta;
 			}
 		}
