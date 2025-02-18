@@ -32,16 +32,21 @@ public class Buscar {
 		return "Pais no trobat";
 	}
 
-	public static void OrdenarMajorMenor(double[] precio) {
+	public static void OrdenarMajorMenor(double[] precio,String[] hierba) {
 		for(int i=0;i<precio.length;i++) {
 			for(int j=i+1;j<precio.length;j++) {
 				if(precio[i]<precio[j]) {
 					double doble=precio[i];
 					precio[i]=precio[j];
 					precio[j]=doble;
+					
+					String orde=hierba[i];
+					hierba[i]=hierba[j];
+					hierba[j]=orde;
+						
 				}
 			}
-			System.out.println(precio[i]);	
+			System.out.println(hierba[i]+" : "+precio[i]);
 		}
 	}
 	
