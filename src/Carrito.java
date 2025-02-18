@@ -1,12 +1,27 @@
+import java.util.Scanner;
 
 public class Carrito {
 
-	public static void main(String[] args) {
-		double[] precio = { 1.70, 4.20, 2.47, 1.33 };
-
-	}
-	public static double totalP(double[] preci) {
-		f
+	
+	public static void totalP(double[] precio,String[]nom) {
+		Scanner scan= new Scanner(System.in);
+		Scanner scan1= new Scanner(System.in);
+		String [] llista=new String[nom.length];
+		System.out.println("Selecciona producte");
+		String producte=scan.nextLine();
+		System.out.println("Cantitat");
+		double cant=scan1.nextDouble();
+		int posi=0;
+		for(int i=0;i<nom.length;i++) {
+			if(producte.equals(nom[i])) {
+				llista[posi]=nom[i];
+				double total=+precio[i]*cant;
+				
+			}
+		}
+		
+		
+		
 	}
 
 }
