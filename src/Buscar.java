@@ -2,14 +2,6 @@ import java.util.Scanner;
 
 public class Buscar {
 	
-
-	public static void main(String[] args) {
-		double[] precio = { 1.70, 4.20, 2.47, 1.33 };
-		String[] hierba = { "Maria Juana", "Hierba de los bosques", "La seta feliz", "El oro verde" };
-		String[] origen = { "Mexico", "Andorra", "Marrueco", "Palestina" };
-		OrdenarMajorMenor(precio, hierba);
-		OrdenarMenorMajor(precio, hierba);
-	}
 	public static String BuscarProduNom(String[] hierba){
 		Scanner scan=new Scanner(System.in);
 		System.out.println("Introduzca nombre");
