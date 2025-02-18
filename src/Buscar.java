@@ -53,7 +53,7 @@ public class Buscar {
 						
 				}
 			}
-			System.out.println(hierba[i]+" : "+precio[i]);
+			System.out.println(hierba[i]+" : "+precio[i]+" Pokéyenes");
 		}
 	}
 	
@@ -72,7 +72,7 @@ public class Buscar {
 						
 				}
 			}
-			System.out.println(hierba[i]+" : "+precio[i]);
+			System.out.println(hierba[i]+" : "+precio[i]+" Pokéyenes");
 		}
 		
 	}
