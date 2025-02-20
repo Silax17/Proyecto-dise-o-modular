@@ -17,14 +17,13 @@ public class Buscar {
 		
 		return "Planta no trobada";
 	}
-	public static String BuscarProduOri(String[] origen) {
+	public static String BuscarProduOri(String[] origen, String[] nom) {
 		Scanner scan=new Scanner(System.in);
 		System.out.println("Introduzca nombre");
-		String nom="";
-		nom=scan.nextLine();
+		String pais=scan.nextLine();
 		for(int i=0;i<origen.length;i++) {
 			if(origen[i].equals(nom)) {
-				String ori=origen[i];
+				String ori=nom[i];
 				return ori;
 			}
 		}
