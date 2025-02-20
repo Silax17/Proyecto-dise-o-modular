@@ -5,7 +5,7 @@ public class Carrito {
 		 String[] hierba = { "Maria Juana", "Hierba de los bosques", "La seta feliz", "El oro verde" };
 		 String[] origen = { "Mexico", "Andorra", "Marrueco", "Palestina" };
 		 double[] precio = { 1.70, 4.20, 2.47, 1.33 };
-
+		 double res=totalC(precio,hierba);
 	}
 
 
@@ -33,11 +33,12 @@ public class Carrito {
 				llista[posi]=nom[i];
 				total += precio[i]*cant;
 				posi++;
-				i=nom.length;
+				i=nom.length-1;
+				System.out.println("LISTA DE LA COMPRA");
+				System.out.println(nom[i]+" x"+cant);
+				}
 			} 
-			System.out.println("LISTA DE LA COMPRA");
-			System.out.println(nom[i]+" x"+cant);
-			}
+			
 		System.out.println("Vols seguir comprant? si/no");
 		exit=scan.nextLine();
 		}
