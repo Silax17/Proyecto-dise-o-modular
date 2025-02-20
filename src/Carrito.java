@@ -12,6 +12,9 @@ public class Carrito {
 		double total=0;
 		while(exit.equals("si")){
 		System.out.println("Selecciona producte");
+		for(int i=0;i<nom.length;i++) {
+			System.out.println(nom[i]);
+		}
 		String producte=scan.nextLine();
 		System.out.println("Cantitat");
 		float cant=scan1.nextFloat();
