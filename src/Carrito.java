@@ -16,7 +16,7 @@ public class Carrito {
 		String exit="si";
 		int posi=0;
 		double total=0;
-		
+		String compra="";
 		while(exit.equals("si")){
 		System.out.println("Selecciona producte");
 		
@@ -33,16 +33,18 @@ public class Carrito {
 				llista[posi]=nom[i];
 				total += precio[i]*cant;
 				posi++;
+				compra += nom[i]+" x"+cant;
 				i=nom.length-1;
-				System.out.println("LISTA DE LA COMPRA");
-				System.out.println(nom[i]+" x"+cant);
+				
 				}
 			} 
 			
 		System.out.println("Vols seguir comprant? si/no");
 		exit=scan.nextLine();
 		}
-		
+		System.out.println("LLISTA DE AL COMPRA");
+		System.out.println(compra);
+		System.out.println(total);
 		return total;
 	}
 	
