@@ -11,6 +11,7 @@ public class main {
 		Scanner scan= new Scanner(System.in);
 		String nombre, lugar;
 		double cantidad;
+		double total;
 		System.out.println("Buenos dias! Que quieres hacer hoy?");
 		System.out.println("1.Buscar producte per nom");
 		System.out.println("2.Buscar producte per origen");
@@ -46,7 +47,7 @@ public class main {
 
 			else if(eleccio.equals("5")) {
 				System.out.println("Usuario selecciona varios productos para comprar");
-				// Codigo para seleccionar primer producto
+				total=Carrito.totalC(precio,hierba);
 				nombre = "Hierba de los bosques";
 				cantidad = 3;
 
@@ -68,7 +69,7 @@ public class main {
 		// Codigo para eliminar elemento del carrito
 
 		System.out.println("Usuario finaliza la compra");
-		// Codigo para finalizar la compra y que salga el total de la compra
+		System.out.println(total);
 	}
 	
 	//Funciones extra que considereis necesarias
