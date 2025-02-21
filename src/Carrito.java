@@ -39,6 +39,10 @@ public class Carrito {
 				preu[posi]= precio[i]*cant;
 				total+=preu[posi];
 				posi++;
+<<<<<<< HEAD
+=======
+				compra += nom[i]+" x"+cant+"\n";
+>>>>>>> 7de64f081ad39289c8aa844285eaeb342b9996b9
 				i=nom.length-1;
 				
 				}
