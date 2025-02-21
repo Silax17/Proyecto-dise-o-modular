@@ -2,37 +2,35 @@ import java.util.Scanner;
 
 public class Buscar {
 	
-<<<<<<< HEAD
 
-	public static String BuscarProduNom(){
-=======
-	public static String BuscarProduNom(String[] hierba){
->>>>>>> buscar
+	public static String BuscarProduNom(String[]hierba){
 		Scanner scan=new Scanner(System.in);
 		System.out.println("Introduzca nombre");
 		String nom="";
 		nom=scan.nextLine().toLowerCase();
-		for(int i=0;i<main.hierba.length;i++) {
-			main.hierba[i]=main.hierba[i].toLowerCase();
-			if(main.hierba[i].contains(nom)) {
-				String planta=main.hierba[i];
+		for(int i=0;i<hierba.length;i++) {
+			hierba[i]=hierba[i].toLowerCase();
+			if(hierba[i].contains(nom)) {
+				String planta=hierba[i];
 				return "Planta trobada "+planta;
 			}
 		}
 		
 		return "Planta no trobada";
 	}
-	public static String BuscarProduOri(String[] origen) {
-	public static String BuscarProduOri(String[] origen, String[] nom) {
+	public static String BuscarProduOri(String[] origen,String[]hierba) {
 		Scanner scan=new Scanner(System.in);
+		for(int i=0;i<origen.length;i++) {
+			System.out.println(origen[i]);
+			
+		}
+		
 		System.out.println("Introduzca nombre");
 		String nom="";
 		nom=scan.nextLine();
-		String pais=scan.nextLine();
 		for(int i=0;i<origen.length;i++) {
 			if(origen[i].equals(nom)) {
-				String ori=origen[i];
-				String ori=nom[i];
+				String ori=hierba[i];
 				return ori;
 			}
 		}
@@ -53,16 +51,11 @@ public class Buscar {
 						
 				}
 			}
-<<<<<<< HEAD
-			System.out.println(hierba[i]+" : "+precio[i]);
-=======
-			System.out.println(hierba[i]+" : "+precio[i]+" Pokéyenes");
->>>>>>> buscar
+			System.out.println(hierba[i]+" : "+precio[i]+" pokeyenes");
 		}
 	}
 	
-	public static void OrdenarMenorMajor(double[] precio) {
-	public static void OrdenarMenorMajor(double[] precio,String[]hierba) {
+	public static void OrdenarMenorMajor(double[] precio,String[] hierba) {
 		
 		for(int i=0;i<precio.length;i++) {
 			for(int j=i+1;j<precio.length;j++) {
@@ -70,16 +63,13 @@ public class Buscar {
 					double doble=precio[i];
 					precio[i]=precio[j];
 					precio[j]=doble;
-					
 					String orde=hierba[i];
 					hierba[i]=hierba[j];
 					hierba[j]=orde;
-						
 				}
 			}
-			System.out.println(precio[i]);
+			System.out.println(hierba[i]+" : "+precio[i]+" pokeyenes");
 			
-			System.out.println(hierba[i]+" : "+precio[i]+" Pokéyenes");
 		}
 		
 	}

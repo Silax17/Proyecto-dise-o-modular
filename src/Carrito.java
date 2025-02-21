@@ -43,7 +43,7 @@ public class Carrito {
 		}
 		System.out.println("LLISTA DE AL COMPRA");
 		for(int i=0;i<posi;i++) {
-		System.out.println(llista[i]);
+		System.out.println(llista[i]+" pokeyenes");
 		}
 		System.out.println(total);
 		

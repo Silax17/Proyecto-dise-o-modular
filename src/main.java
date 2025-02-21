@@ -12,65 +12,78 @@ public class main {
 		String nombre, lugar;
 		double cantidad;
 		double total;
+		String exit="";
+		String eleccio="";
 		System.out.println("Buenos dias! Que quieres hacer hoy?");
+		exit=exit.toLowerCase();
+		while(!exit.equals("no")) {
 		System.out.println("1.Buscar producte per nom");
 		System.out.println("2.Buscar producte per origen");
 		System.out.println("3.Ordenar de menor a major");
 		System.out.println("4.Ordenar de major a menor");
 		System.out.println("5.Fer la llista de la compra");
-		System.out.println("6.Fer la llista de la compra");
-		System.out.println("7.Fer la llista de la compra");
-		System.out.println("8.Acabar");
-		String exit="";
-		String eleccio=scan.nextLine();
-		while(!exit.equals("no"))
+		System.out.println("6.Sortir");
+		 eleccio=scan.nextLine();
 			if(eleccio.equals("1")) {
 				System.out.println("Usuario selecciona buscar por nombre");
-				// Codigo para buscar por nombre
+				String nom=Buscar.BuscarProduNom(hierba);
+				System.out.println(nom);
+				System.out.println("Vols seguir?");
+				exit=scan.nextLine();
+				exit=exit.toLowerCase();
 			}
 			else if(eleccio.equals("2")) {
 				System.out.println("Usuario selecciona buscar por origen");
-				lugar = "Andorra";
-				// Codigo para buscar por origen
+				String ori=Buscar.BuscarProduOri(origen, hierba);
+				System.out.println(ori);
+				System.out.println("Vols seguir?");
+				exit=scan.nextLine();
+				exit=exit.toLowerCase();
+				
 			}
 		
 			else if(eleccio.equals("3")) {
 				System.out.println("Usuario selecciona ordenar por precio de menor a mayor");
 				Buscar.OrdenarMenorMajor(precio,hierba);
+				System.out.println("Vols seguir?");
+				exit=scan.nextLine();
+				exit=exit.toLowerCase();
 
 			}
 			else if(eleccio.equals("4")) {
 				System.out.println("Usuario selecciona ordenar por precio de menor a mayor");
 				Buscar.OrdenarMajorMenor(precio,hierba);
+				System.out.println("Vols seguir?");
+				exit=scan.nextLine();
+				exit=exit.toLowerCase();
 
 			}
 
 			else if(eleccio.equals("5")) {
-				System.out.println("Usuario selecciona varios productos para comprar");
-				total=Carrito.totalC(precio,hierba);
-				nombre = "Hierba de los bosques";
-				cantidad = 3;
-
-				// Codigo para seleccionar segundo producto
-				nombre = "El oro verde";
-				cantidad = 1;
-
-				// Codigo para seleccionar tercer producto
-				nombre = "La seta feliz";
-				cantidad = 2.5;
-			}
-			else if(eleccio.equals("6")) {
+				double compra=Carrito.totalC(precio, hierba);
+				System.out.println("Vols seguir?");
+				exit=scan.nextLine();
+				exit=exit.toLowerCase();
 				
 			}
+			else if(eleccio.equals("6")) {
+				System.out.println("Surtint del programa");
+				exit="no";
+				
+			}
+			else if(eleccio.equals("no")) {
+				System.out.println("Surtint del programa");
+				exit="no";
+			}
+			else {
+				System.out.println("Opcio no valida torna a elegir");
+			}
+		}
 
-
+		System.out.println("Usuari finalitza la compra");
+		System.out.println("GRACIES PER COMPRAR ");
 		
-		System.out.println("Usuario elimina el segundo elemento de su carrito");
-		// Codigo para eliminar elemento del carrito
-
-		System.out.println("Usuario finaliza la compra");
-		System.out.println(total);
-	}
 	
+	}
 	//Funciones extra que considereis necesarias
 }
