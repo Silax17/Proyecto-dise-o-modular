@@ -36,8 +36,8 @@ public class Buscar {
 		for(int i=0;i<precio.length;i++) {
 			for(int j=i+1;j<precio.length;j++) {
 				if(precio[i]<precio[j]) {
-					double doble=precio[i];
-					precio[i]=precio[j];
+					double doble=precio[i];//0
+					precio[i]=precio[j];//1
 					precio[j]=doble;
 					
 					String orde=hierba[i];
