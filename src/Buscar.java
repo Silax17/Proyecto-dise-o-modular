@@ -2,8 +2,12 @@ import java.util.Scanner;
 
 public class Buscar {
 	
+<<<<<<< HEAD
 
 	public static String BuscarProduNom(){
+=======
+	public static String BuscarProduNom(String[] hierba){
+>>>>>>> buscar
 		Scanner scan=new Scanner(System.in);
 		System.out.println("Introduzca nombre");
 		String nom="";
@@ -19,13 +23,16 @@ public class Buscar {
 		return "Planta no trobada";
 	}
 	public static String BuscarProduOri(String[] origen) {
+	public static String BuscarProduOri(String[] origen, String[] nom) {
 		Scanner scan=new Scanner(System.in);
 		System.out.println("Introduzca nombre");
 		String nom="";
 		nom=scan.nextLine();
+		String pais=scan.nextLine();
 		for(int i=0;i<origen.length;i++) {
 			if(origen[i].equals(nom)) {
 				String ori=origen[i];
+				String ori=nom[i];
 				return ori;
 			}
 		}
@@ -46,11 +53,16 @@ public class Buscar {
 						
 				}
 			}
+<<<<<<< HEAD
 			System.out.println(hierba[i]+" : "+precio[i]);
+=======
+			System.out.println(hierba[i]+" : "+precio[i]+" Pokéyenes");
+>>>>>>> buscar
 		}
 	}
 	
 	public static void OrdenarMenorMajor(double[] precio) {
+	public static void OrdenarMenorMajor(double[] precio,String[]hierba) {
 		
 		for(int i=0;i<precio.length;i++) {
 			for(int j=i+1;j<precio.length;j++) {
@@ -58,10 +70,16 @@ public class Buscar {
 					double doble=precio[i];
 					precio[i]=precio[j];
 					precio[j]=doble;
+					
+					String orde=hierba[i];
+					hierba[i]=hierba[j];
+					hierba[j]=orde;
+						
 				}
 			}
 			System.out.println(precio[i]);
 			
+			System.out.println(hierba[i]+" : "+precio[i]+" Pokéyenes");
 		}
 		
 	}
