@@ -1,12 +1,6 @@
 import java.util.Scanner;
 
 public class Carrito {
-	public static void main(String args[]) {
-		 String[] hierba = { "Maria Juana", "Hierba de los bosques", "La seta feliz", "El oro verde" };
-		 String[] origen = { "Mexico", "Andorra", "Marrueco", "Palestina" };
-		 double[] precio = { 1.70, 4.20, 2.47, 1.33 };
-		 double res=totalC(precio,hierba);
-	}
 
 
 	public static double totalC(double[] precio,String []nom) {
@@ -39,10 +33,6 @@ public class Carrito {
 				preu[posi]= precio[i]*cant;
 				total+=preu[posi];
 				posi++;
-<<<<<<< HEAD
-=======
-				compra += nom[i]+" x"+cant+"\n";
->>>>>>> 7de64f081ad39289c8aa844285eaeb342b9996b9
 				i=nom.length-1;
 				
 				}
@@ -100,7 +90,6 @@ public class Carrito {
 			}
 				
 			
-				
 			
 		
 		return total;
